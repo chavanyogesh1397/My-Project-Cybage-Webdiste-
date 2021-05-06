@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite parallel="tests" name="Failed suite [RegressionTesting]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Validate_Keyword(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="Test_Classes.Validate_Keyword">
+        <methods>
+          <include name="validateAplyNowBtn"/>
+          <include name="validateSelectLocationDrop"/>
+          <include name="enterKeyword"/>
+          <include name="validateExpLink"/>
+          <include name="verifyKeywordTxt"/>
+          <include name="openCareerPage"/>
+          <include name="screenshot"/>
+        </methods>
+      </class> <!-- Test_Classes.Validate_Keyword -->
+    </classes>
+  </test> <!-- Validate_Keyword(failed) -->
+  <test thread-count="5" parallel="tests" name="ValidateCareerTest(failed)">
+    <parameter name="browserName" value="firefox"/>
     <classes>
       <class name="Test_Classes.ValidateCareerTest">
         <methods>
           <include name="screenshot"/>
+          <include name="verifyCurrentOpeningsTab"/>
           <include name="openBrowse"/>
+          <include name="verifyCareersPage"/>
           <include name="verifyCareersLink"/>
           <include name="closeBrowse"/>
+          <include name="validateSelectLocationDrop"/>
         </methods>
       </class> <!-- Test_Classes.ValidateCareerTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- ValidateCareerTest(failed) -->
+</suite> <!-- Failed suite [RegressionTesting] -->

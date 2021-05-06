@@ -6,9 +6,12 @@
       <class name="Test_Classes.ValidateCareerTest">
         <methods>
           <include name="screenshot"/>
+          <include name="verifyCurrentOpeningsTab"/>
           <include name="openBrowse"/>
+          <include name="verifyCareersPage"/>
           <include name="verifyCareersLink"/>
           <include name="closeBrowse"/>
+          <include name="validateSelectLocationDrop"/>
         </methods>
       </class> <!-- Test_Classes.ValidateCareerTest -->
     </classes>
